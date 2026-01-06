@@ -71,6 +71,11 @@ public class FutureDemoAsyncEquivalent {
             return  "Yara";
         }
 
+
+    //CompletableFuture Approach
+
+
+
     //Output:
     //
 //            main method() : Executed by thread : main

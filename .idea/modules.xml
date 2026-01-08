@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Java_Threads_Concurrency.iml" filepath="$PROJECT_DIR$/Java_Threads_Concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_Base_Template.iml" filepath="$PROJECT_DIR$/Java_Base_Template.iml" />
     </modules>
   </component>
 </project>

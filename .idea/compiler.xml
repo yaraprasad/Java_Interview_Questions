@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="17">
-      <module name="Java_Base_Template" target="" />
+      <module name="Java_Interview_Questions" target="" />
     </bytecodeTargetLevel>
   </component>
 </project>

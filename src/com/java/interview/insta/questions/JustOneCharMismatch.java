@@ -1,5 +1,8 @@
 package com.java.interview.insta.questions;
 
+import java.util.Arrays;
+import java.util.Optional;
+
 public class JustOneCharMismatch {
     public static void main(String[] args) {
 
@@ -8,11 +11,30 @@ public class JustOneCharMismatch {
         //output: banaba
         //As one char mismatch banaba and banana(given matcher)
 
+        //Approach 1
         for (String word:array){
             if(isOneCharMisMatch(word,matcher)){
                 System.out.println(word);
             }
         }
+
+        //Approach 2
+        Optional<String> result =
+                Arrays.stream(array)
+                        .filter(s -> s.length() == matcher.length())
+                        .filter(s -> {
+                            int mismatches = 0;
+                            for (int i = 0; i < s.length(); i++) {
+                                if (s.charAt(i) != matcher.charAt(i)) {
+                                    mismatches++;
+                                    if (mismatches > 1) return false;
+                                }
+                            }
+                            return mismatches == 1;
+                        })
+                        .findFirst();
+
+        result.ifPresent(System.out::println);
     }
 
     public static  boolean isOneCharMisMatch(String word, String matcher){
@@ -30,4 +52,6 @@ public class JustOneCharMismatch {
         }
         return true;
     }
+
+
 }
